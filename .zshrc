@@ -145,3 +145,11 @@ export PATH
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 
 eval "$(starship init zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/rj/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
