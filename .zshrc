@@ -117,7 +117,7 @@ source $ZSH/oh-my-zsh.sh
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
 export PATH
-
+[[ -f ~/.zsh/goto.zsh ]] && source ~/.zsh/goto.zsh
 [[ -f ~/.zsh/nvm.zsh ]] && source ~/.zsh/nvm.zsh
 [[ -f ~/.zsh/pnpm.zsh ]] && source ~/.zsh/pnpm.zsh
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
