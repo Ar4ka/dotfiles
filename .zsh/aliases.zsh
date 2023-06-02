@@ -12,3 +12,4 @@ alias ll="exa --icons --group-directories-first -l"
 alias g="goto"
 alias grep='grep --color'
 alias vim=nvim
+alias update-system="brew update && brew upgrade && npm update -g && pnpm up -g"
