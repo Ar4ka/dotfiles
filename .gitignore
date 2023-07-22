@@ -4,3 +4,4 @@
 .config/configstore
 .config/op
 .config/filezilla
+.config/nvim
