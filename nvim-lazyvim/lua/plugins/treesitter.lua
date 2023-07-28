@@ -30,6 +30,7 @@ return {
         "regex",
         "rst",
         "rust",
+        "scss",
         "svelte",
         "sql",
         "terraform",
