@@ -25,6 +25,9 @@ return {
         -- rust
         "rust-analyzer",
 
+        --svelte
+        "svelte-language-server",
+
         -- vue
         "vue-language-server",
         -- see lazy.lua for LazyVim extras
