@@ -40,6 +40,9 @@ return {
         "vue",
         "yaml",
       },
+      autotag = {
+        enable = true,
+      },
     },
   },
 
