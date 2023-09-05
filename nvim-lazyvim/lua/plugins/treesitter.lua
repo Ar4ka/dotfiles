@@ -51,4 +51,7 @@ return {
     "nvim-treesitter/nvim-treesitter-context",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
+  {
+    "windwp/nvim-ts-autotag",
+  },
 }
