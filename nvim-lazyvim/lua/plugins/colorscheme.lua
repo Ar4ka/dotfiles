@@ -20,4 +20,25 @@ return {
       -- colorscheme = "catppuccin-latte",
     },
   },
+  {
+    "catppuccin/nvim",
+    -- lazy = false,
+    name = "catppuccin",
+    priority = 1000,
+    opts = {
+      flavor = "mocha",
+      transparent_background = true,
+      integrations = {
+        gitsigns = true,
+        telescope = true,
+        neogit = true,
+        nvimtree = true,
+        indent_blankline = true,
+        dashboard = true,
+        which_key = true,
+        mini = true,
+        harpoon = true,
+      },
+    },
+  },
 }
