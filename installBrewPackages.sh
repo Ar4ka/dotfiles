@@ -8,6 +8,8 @@ brew install corepack
 brew install direnv
 brew install exa
 brew install fastlane
+brew install font-hack-nerd-font
+brew install font-fira-code-nerd-font
 brew install gh
 brew install git
 brew install git-lfs
