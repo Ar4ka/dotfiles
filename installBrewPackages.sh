@@ -37,3 +37,5 @@ brew install tmux-mem-cpu-load
 brew install wget
 brew install wix/brew/applesimutils
 brew install zplug
+
+source $(brew --prefix nvm)/nvm.sh
