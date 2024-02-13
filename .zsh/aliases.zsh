@@ -13,3 +13,5 @@ alias g="goto"
 alias grep='grep --color'
 alias vim=nvim
 alias update-system="brew update && brew upgrade && npm update -g"
+alias cocker="docker compose"
+alias coker-restart="docker compose down && docker compose up -d"
