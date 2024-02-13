@@ -30,6 +30,9 @@ return {
 
         -- vue
         "vue-language-server",
+
+        -- php
+        "intelephense",
         -- see lazy.lua for LazyVim extras
       }
 
