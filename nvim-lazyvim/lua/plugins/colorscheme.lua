@@ -38,14 +38,8 @@ return {
         which_key = true,
         mini = true,
         harpoon = true,
+        notify = true,
       },
-    },
-  },
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      -- other stuff
-      background_colour = "#000000",
     },
   },
 }
