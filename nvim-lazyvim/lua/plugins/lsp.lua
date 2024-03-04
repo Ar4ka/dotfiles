@@ -96,15 +96,12 @@ return {
           extra_args = { "--indent-type", "Spaces", "--indent-width", "2" },
         }),
         formatting.shfmt,
-        formatting.rustfmt,
         formatting.yamlfix, -- requires python
         formatting.prettierd,
         diagnostics.yamllint,
-        diagnostics.shellcheck,
         diagnostics.sqlfluff.with({
           extra_args = { "--dialect", "postgres" },
         }),
-        code_actions.shellcheck,
         code_actions.gitsigns,
       }
 
