@@ -1,6 +1,7 @@
 #!/bin/zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install bash-completion
+brew install bun
 brew install btop
 brew install cmake
 brew install cocoapods
