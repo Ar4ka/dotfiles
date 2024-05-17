@@ -120,6 +120,7 @@ export PATH
 [[ -f ~/.zsh/goto.zsh ]] && source ~/.zsh/goto.zsh
 [[ -f ~/.zsh/nvm.zsh ]] && source ~/.zsh/nvm.zsh
 [[ -f ~/.zsh/pnpm.zsh ]] && source ~/.zsh/pnpm.zsh
+[[ -f ~/.zsh/zoxide.zsh ]] && source ~/.zsh/zoxide.zsh
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 
 eval "$(starship init zsh)"
@@ -131,18 +132,4 @@ eval "$(starship init zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/rj/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/rj/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/rj/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/rj/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+. "$HOME/.cargo/env"
