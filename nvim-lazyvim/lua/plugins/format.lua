@@ -1,59 +1,53 @@
 return {
 
-  {
-    "williamboman/mason.nvim",
+	{
+		"williamboman/mason.nvim",
 
-    opts = function(_, opts)
-      local ensure_installed = {
-        -- python
-        "black",
+		opts = function(_, opts)
+			local ensure_installed = {
+				-- python
+				"black",
 
-        -- lua
-        "stylua",
+				-- lua
+				"stylua",
 
-        -- shell
-        "shfmt",
+				-- shell
+				"shfmt",
 
-        -- yaml
-        "yamlfix",
-        "yamlfmt",
+				-- yaml
+				"yamlfix",
+				"yamlfmt",
 
-        -- rust
-        -- rustfmt via rustup
+				-- rust
+				-- rustfmt via rustup
 
-        -- see lazy.lua for LazyVim extras
-      }
+				-- see lazy.lua for LazyVim extras
+			}
 
-      opts.ensure_installed = opts.ensure_installed or {}
-      vim.list_extend(opts.ensure_installed, ensure_installed)
-    end,
-  },
-
-  {
-    "mhartington/formatter.nvim",
-    enabled = false, -- let's see what happens with null-ls and LazyVim
-    config = function()
-      local formatter = require("formatter")
-      formatter.setup({
-        filetype = {
-          lua = {
-            require("formatter.filetypes.lua").stylua,
-          },
-          python = {
-            require("formatter.filetypes.python").black,
-          },
-          sh = {
-            require("formatter.filetypes.sh").shfmt,
-          },
-          yaml = {
-            require("formatter.filetypes.yaml").yamlfix,
-            require("formatter.filetypes.yaml").yamlfmt,
-          },
-        },
-      })
-    end,
-  },
-  "windwp/nvim-autopairs",
-  event = "InsertEnter",
-  opts = {}, -- this is equalent to setup({}) function
+			opts.ensure_installed = opts.ensure_installed or {}
+			vim.list_extend(opts.ensure_installed, ensure_installed)
+		end,
+	},
+	{
+		"stevearc/conform.nvim",
+		lazy = true,
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {
+			formatters_by_ft = {
+				php = { "php-cs-fixer" },
+			},
+			formatters = {
+				["php-cs-fixer"] = {
+					command = "php-cs-fixer",
+					args = {
+						"fix",
+						"--rules=@PSR12", -- Formatting preset. Other presets are available, see the php-cs-fixer docs.
+						"$FILENAME",
+					},
+					stdin = false,
+				},
+			},
+			notify_on_error = true,
+		},
+	},
 }
