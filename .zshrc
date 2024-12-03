@@ -133,3 +133,5 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 . "$HOME/.cargo/env"
+# Created by `pipx` on 2024-05-19 13:01:45
+export PATH="$PATH:/Users/rj/.local/bin"
