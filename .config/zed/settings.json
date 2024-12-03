@@ -7,14 +7,60 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "auto_update_extensions": {
+    "vue": true
+  },
+  "theme": "Catppuccin Mocha",
   "project_panel": {
     "dock": "right"
   },
-  "theme": "Catppuccin Mocha",
+  "tab_bar": {
+    "show": false
+  },
   "base_keymap": "VSCode",
   "vim_mode": true,
-  "ui_font_size": 14,
-  "ui_font_family": "FiraCode Nerd Font",
-  "buffer_font_size": 12,
-  "buffer_font_family": "FiraCode Nerd Font"
+  "ui_font_size": 16,
+  "ui_font_family": "Iosevka Nerd Font",
+  "buffer_font_size": 14,
+  "buffer_font_family": "Iosevka Nerd Font Mono",
+  "show_completion_documentation": true,
+  "show_completion_type": true,
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "hour_format": "hour24",
+  "languages": {
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "Vue.js": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    }
+  },
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "codeActionOnSave": {
+          "rules": ["import/order"]
+        }
+      }
+    }
+  }
 }
