@@ -2,42 +2,42 @@
 
 return {
 
-  -- change mason config
-  -- note: don't forget to update treesitter for languages
-  {
-    "williamboman/mason.nvim",
+	-- change mason config
+	-- note: don't forget to update treesitter for languages
+	{
+		"mason-org/mason.nvim",
 
-    opts = function(_, opts)
-      local ensure_installed = {
-        -- python
-        "ruff-lsp",
-        "pyright",
+		opts = function(_, opts)
+			local ensure_installed = {
+				-- python
+				"ruff-lsp",
+				"pyright",
 
-        -- lua
-        "lua-language-server",
+				-- lua
+				"lua-language-server",
 
-        -- shell
-        "bash-language-server",
+				-- shell
+				"bash-language-server",
 
-        -- docker
-        "dockerfile-language-server",
+				-- docker
+				"dockerfile-language-server",
 
-        -- rust
-        "rust-analyzer",
+				-- rust
+				"rust-analyzer",
 
-        --svelte
-        "svelte-language-server",
+				--svelte
+				"svelte-language-server",
 
-        -- vue
-        "vue-language-server",
+				-- vue
+				"vue-language-server",
 
-        -- php
-        "intelephense",
-        -- see lazy.lua for LazyVim extras
-      }
+				-- php
+				"intelephense",
+				-- see lazy.lua for LazyVim extras
+			}
 
-      opts.ensure_installed = opts.ensure_installed or {}
-      vim.list_extend(opts.ensure_installed, ensure_installed)
-    end,
-  },
+			opts.ensure_installed = opts.ensure_installed or {}
+			vim.list_extend(opts.ensure_installed, ensure_installed)
+		end,
+	},
 }

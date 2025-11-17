@@ -122,6 +122,7 @@ export PATH
 [[ -f ~/.zsh/pnpm.zsh ]] && source ~/.zsh/pnpm.zsh
 [[ -f ~/.zsh/zoxide.zsh ]] && source ~/.zsh/zoxide.zsh
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
+[[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
 
 eval "$(starship init zsh)"
 
@@ -135,3 +136,21 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 . "$HOME/.cargo/env"
 # Created by `pipx` on 2024-05-19 13:01:45
 export PATH="$PATH:/Users/rj/.local/bin"
+
+source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh # Or run `brew info chruby` to find out installed directory
+
+
+CloneAll() {
+    # Make the url to the input github organization's repository page.
+    ORG_URL="https://api.github.com/orgs/${1}/repos?per_page=200";
+
+    # List of all repositories of that organization (seperated by newline-eol).
+    ALL_REPOS=$(curl -s ${ORG_URL} | grep html_url | awk 'NR%2 == 0' \
+                | cut -d ':' -f 2-3 | tr -d '",');
+
+    # Clone all the repositories.
+    for ORG_REPO in ${ALL_REPOS}; do
+        git clone ${ORG_REPO}.git;
+    done
+}
+
